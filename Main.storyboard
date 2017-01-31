@@ -42,7 +42,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="tDH-zD-aqm" kind="show" id="uCy-Ab-jTd"/>
+                                    <segue destination="tDH-zD-aqm" kind="show" identifier="showBuddy" id="uCy-Ab-jTd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -63,22 +63,55 @@
             </objects>
             <point key="canvasLocation" x="-253.59999999999999" y="73.313343328335833"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Chat-->
         <scene sceneID="jl9-ly-mLQ">
             <objects>
-                <tableViewController id="tDH-zD-aqm" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9AT-Sr-3UR">
+                <tableViewController id="tDH-zD-aqm" customClass="ChatController" customModule="Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="20" sectionFooterHeight="28" id="9AT-Sr-3UR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yrx-Ht-di9">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextViewCell" rowHeight="76" id="yrx-Ht-di9" customClass="TextViewCell" customModule="Chat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="76"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yrx-Ht-di9" id="DAU-N3-ebG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4of-9Z-ccM">
+                                            <rect key="frame" x="10" y="19" width="355" height="52"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="tDH-zD-aqm" id="Pxu-hF-hIn"/>
+                                            </connections>
+                                        </textView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAc-Sh-P2T">
+                                            <rect key="frame" x="18" y="0.0" width="347" height="19"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <size key="shadowOffset" width="0.0" height="1"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SAc-Sh-P2T" firstAttribute="leading" secondItem="DAU-N3-ebG" secondAttribute="leading" constant="18" id="EnG-eh-rrM"/>
+                                        <constraint firstItem="SAc-Sh-P2T" firstAttribute="top" secondItem="DAU-N3-ebG" secondAttribute="top" id="HtN-az-ZOe"/>
+                                        <constraint firstAttribute="trailing" secondItem="SAc-Sh-P2T" secondAttribute="trailing" constant="10" id="PSC-tF-2yC"/>
+                                        <constraint firstAttribute="trailing" secondItem="4of-9Z-ccM" secondAttribute="trailing" constant="10" id="sTa-NC-0fd"/>
+                                        <constraint firstItem="4of-9Z-ccM" firstAttribute="top" secondItem="SAc-Sh-P2T" secondAttribute="bottom" id="uL8-iV-BGf"/>
+                                        <constraint firstItem="4of-9Z-ccM" firstAttribute="leading" secondItem="DAU-N3-ebG" secondAttribute="leading" constant="10" id="uVS-5d-rBS"/>
+                                        <constraint firstAttribute="bottom" secondItem="4of-9Z-ccM" secondAttribute="bottom" constant="5" id="xG5-ar-4rd"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="header" destination="SAc-Sh-P2T" id="dEe-GC-ItX"/>
+                                    <outlet property="textView" destination="4of-9Z-ccM" id="unO-Me-vaN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -86,10 +119,17 @@
                             <outlet property="delegate" destination="tDH-zD-aqm" id="lmy-tl-xXL"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Chat" id="PIS-lS-fBy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TdU-2O-kZ2">
+                            <connections>
+                                <segue destination="dAY-LA-45m" kind="presentation" id="tWb-xV-1eb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1m-ul-F8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="510" y="73"/>
+            <point key="canvasLocation" x="509.60000000000002" y="72.413793103448285"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Xpr-Hb-CLw">
@@ -107,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdK-dK-ytz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228" y="72"/>
+            <point key="canvasLocation" x="1321" y="73"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="POf-wb-fHg">

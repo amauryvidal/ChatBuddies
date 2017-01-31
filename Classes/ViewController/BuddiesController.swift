@@ -3,10 +3,6 @@ import UIKit
 class BuddiesController: UITableViewController {
     
     var viewModel = BuddiesViewModel()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -28,7 +24,7 @@ class BuddiesController: UITableViewController {
         if segue.identifier == "showBuddy" {
             if let selectedIndexPath = tableView.indexPathForSelectedRow,
                 let buddy = getBuddy(at: selectedIndexPath) {
-                (segue.destination as? ChatController)?.buddy = buddy
+                (segue.destination as? ChatController)?.viewModel = ChatViewModel(buddy: buddy)
             }
         }
     }

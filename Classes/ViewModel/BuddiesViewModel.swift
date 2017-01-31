@@ -26,7 +26,7 @@ struct BuddiesViewModel {
     }
     
     func buddy(at index: Int) -> Buddy? {
-        guard index < buddies.count else {
+        guard index < nbBuddies else {
             return nil
         }
         return buddies[index]

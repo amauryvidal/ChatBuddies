@@ -23,9 +23,10 @@
 		51AA41081247985400EB966D /* Matt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51AA41041247985400EB966D /* Matt.jpg */; };
 		AA74DCEA1E40DCD900FD1619 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA74DCE91E40DCD900FD1619 /* Main.storyboard */; };
 		AA74DCEC1E40DE5A00FD1619 /* BuddyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA74DCEB1E40DE5A00FD1619 /* BuddyCell.swift */; };
+		AA7A7EF31E4129C400985AA8 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A7EF21E4129C400985AA8 /* APIClient.swift */; };
 		AAD0EA8B1E40E3F9004B8C0E /* BuddiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EA8A1E40E3F9004B8C0E /* BuddiesViewModel.swift */; };
 		AAD0EA8D1E40E86C004B8C0E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EA8C1E40E86C004B8C0E /* CoreDataStack.swift */; };
-		AAD0EA8F1E40FB41004B8C0E /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EA8E1E40FB41004B8C0E /* MessagesViewModel.swift */; };
+		AAD0EA8F1E40FB41004B8C0E /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EA8E1E40FB41004B8C0E /* ChatViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,9 +53,10 @@
 		8D1107310486CEB800E47090 /* Chat-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Chat-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		AA74DCE91E40DCD900FD1619 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AA74DCEB1E40DE5A00FD1619 /* BuddyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuddyCell.swift; sourceTree = "<group>"; };
+		AA7A7EF21E4129C400985AA8 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = Network/APIClient.swift; sourceTree = "<group>"; };
 		AAD0EA8A1E40E3F9004B8C0E /* BuddiesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuddiesViewModel.swift; sourceTree = "<group>"; };
 		AAD0EA8C1E40E86C004B8C0E /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		AAD0EA8E1E40FB41004B8C0E /* MessagesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
+		AAD0EA8E1E40FB41004B8C0E /* ChatViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				AA74DCE81E40DAF400FD1619 /* Utils */,
+				AA74DCE81E40DAF400FD1619 /* Network */,
 				AA74DCE71E40DAA400FD1619 /* View */,
 				AA74DCE61E40DAA000FD1619 /* ViewModel */,
 				AA74DCE51E40DA9B00FD1619 /* Model */,
@@ -160,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				AAD0EA8A1E40E3F9004B8C0E /* BuddiesViewModel.swift */,
-				AAD0EA8E1E40FB41004B8C0E /* MessagesViewModel.swift */,
+				AAD0EA8E1E40FB41004B8C0E /* ChatViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -174,11 +176,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		AA74DCE81E40DAF400FD1619 /* Utils */ = {
+		AA74DCE81E40DAF400FD1619 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				AA7A7EF21E4129C400985AA8 /* APIClient.swift */,
 			);
-			name = Utils;
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +259,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				51150A981CEEF64A008901A5 /* AppDelegate.swift in Sources */,
+				AA7A7EF31E4129C400985AA8 /* APIClient.swift in Sources */,
 				51150A961CEEF376008901A5 /* BuddiesController.swift in Sources */,
-				AAD0EA8F1E40FB41004B8C0E /* MessagesViewModel.swift in Sources */,
+				AAD0EA8F1E40FB41004B8C0E /* ChatViewModel.swift in Sources */,
 				519ACD161242CA6800768044 /* Model.xcdatamodel in Sources */,
 				51150A921CEEE9FA008901A5 /* SendController.swift in Sources */,
 				51150AA01CEF0E75008901A5 /* Repository.swift in Sources */,

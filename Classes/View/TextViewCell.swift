@@ -1,29 +1,18 @@
 import UIKit
 
-private let ident: String = "TextViewCell"
-
 class TextViewCell: UITableViewCell {
-    var textView: UITextView!
-
-    init() {
-        super.init(style: .default, reuseIdentifier: ident)
-    }
+    static let identifier = "TextViewCell"
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var header: UILabel!
 
-    class func cellForTableView(_ tableView: UITableView) -> TextViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: ident) as! TextViewCell?
-        if cell == nil {
-            cell = TextViewCell()
-            cell!.textView = UITextView(frame: CGRect(x: 10, y: 0, width: 300, height: 30))
-            cell!.textView.returnKeyType = .send
-            cell!.textView.delegate = tableView.delegate as! UITextViewDelegate
-            cell!.textView.isEditable = false
-            cell!.textView.backgroundColor = UIColor.clear
-            cell!.addSubview(cell!.textView)
-        }
-        return cell!
+    func configure(message: Message) {
+        textView.text = message.text
+        backgroundColor = message.fromMe ? UIColor.white : UIColor(red: 0.95, green: 0.95, blue: 1, alpha: 1)
+        var frame = textView.frame
+        frame.size.height = textView.contentSize.height
+        textView.frame = frame
+        
+        header.text = message.header
     }
 }

@@ -29,12 +29,4 @@ class Repository: NSObject {
     func asyncSave() {
 //        self.delegate.perform("save", with: nil, afterDelay: 0)
     }
-//
-    func messageForBuddy(_ buddy: Buddy) -> Message {
-//        let msg: Message = self.delegate.entityForName("Message") as! Message
-//        msg.source = buddy
-//        self.delegate.context.refresh(buddy, mergeChanges: true)
-//        return msg
-        return Message()
-    }
 }
