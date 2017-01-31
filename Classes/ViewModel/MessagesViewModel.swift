@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+
+// let sortDescriptor = NSSortDescriptor(key: "timeSinceReferenceDate", ascending: true)
+
+//func addSortDescriptors() {
+//    let desc: NSEntityDescription = (self.model).entitiesByName["Buddy"]!
+//    let prop: NSFetchedPropertyDescription = desc.propertiesByName["messages"] as! NSFetchedPropertyDescription
+//    let fetchRequest: NSFetchRequest = prop.fetchRequest!
+//    let sort: NSSortDescriptor = NSSortDescriptor(key: "timeSinceReferenceDate", ascending: true)
+//    fetchRequest.sortDescriptors = [sort]
+//}
