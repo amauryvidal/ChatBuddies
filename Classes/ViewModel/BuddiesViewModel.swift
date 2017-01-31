@@ -10,14 +10,14 @@ import Foundation
 import CoreData
 
 struct BuddiesViewModel {
-    //var repository = Repository(delegate: AppDelegate)
     var buddies = [Buddy]()
     
     init() {
-        self.buddies = findBuddies()
+        buddies = findBuddies()
         
         if buddies.count == 0 {
             addHardCodedBuddies()
+            buddies = findBuddies()
         }
     }
     
@@ -40,7 +40,9 @@ extension BuddiesViewModel {
     }
     
     func findBuddies() -> [Buddy] {
-        let request = Buddy.fetchRequest() as! NSFetchRequest<Buddy>
+        let request: NSFetchRequest<Buddy> = Buddy.fetchRequest()
+        print(request)
+        
         do {
             return try CoreDataStack.shared.viewContext.fetch(request)
         } catch {

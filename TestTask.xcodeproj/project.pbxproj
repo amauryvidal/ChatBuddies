@@ -16,7 +16,6 @@
 		51150A9A1CEF0133008901A5 /* Buddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51150A991CEF0133008901A5 /* Buddy.swift */; };
 		51150A9E1CEF0BDC008901A5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51150A9D1CEF0BDC008901A5 /* Message.swift */; };
 		51150AA01CEF0E75008901A5 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51150A9F1CEF0E75008901A5 /* Repository.swift */; };
-		516BB16D14ED259700C042DA /* NSString+SKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 516BB16C14ED259700C042DA /* NSString+SKAdditions.m */; };
 		519ACD161242CA6800768044 /* Model.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 519ACD151242CA6800768044 /* Model.xcdatamodel */; };
 		51AA41051247985400EB966D /* Bonnie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51AA41011247985400EB966D /* Bonnie.jpg */; };
 		51AA41061247985400EB966D /* Jacob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51AA41021247985400EB966D /* Jacob.jpg */; };
@@ -36,7 +35,6 @@
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AAE50D9B0CCF005BE974 /* Chat_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat_Prefix.pch; sourceTree = "<group>"; };
 		51150A8C1CEE4136008901A5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		51150A8E1CEE4F9D008901A5 /* Chat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chat-Bridging-Header.h"; sourceTree = "<group>"; };
 		51150A8F1CEE4F9D008901A5 /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		51150A911CEEE9FA008901A5 /* SendController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendController.swift; sourceTree = "<group>"; };
 		51150A931CEEED3C008901A5 /* TextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewCell.swift; sourceTree = "<group>"; };
@@ -45,8 +43,6 @@
 		51150A991CEF0133008901A5 /* Buddy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buddy.swift; sourceTree = "<group>"; };
 		51150A9D1CEF0BDC008901A5 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		51150A9F1CEF0E75008901A5 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		516BB16B14ED259700C042DA /* NSString+SKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+SKAdditions.h"; path = "Classes/NSString+SKAdditions.h"; sourceTree = "<group>"; };
-		516BB16C14ED259700C042DA /* NSString+SKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+SKAdditions.m"; path = "Classes/NSString+SKAdditions.m"; sourceTree = "<group>"; };
 		519ACD151242CA6800768044 /* Model.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		519ACD931242D40D00768044 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		51AA41011247985400EB966D /* Bonnie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Bonnie.jpg; path = Resources/Bonnie.jpg; sourceTree = "<group>"; };
@@ -82,7 +78,6 @@
 				AA74DCE41E40DA9400FD1619 /* ViewController */,
 				51150A971CEEF64A008901A5 /* AppDelegate.swift */,
 				51150A9F1CEF0E75008901A5 /* Repository.swift */,
-				51150A8E1CEE4F9D008901A5 /* Chat-Bridging-Header.h */,
 				AAD0EA8C1E40E86C004B8C0E /* CoreDataStack.swift */,
 			);
 			path = Classes;
@@ -99,7 +94,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				519ACCBE1242C26A00768044 /* Generic */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -141,15 +135,6 @@
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		519ACCBE1242C26A00768044 /* Generic */ = {
-			isa = PBXGroup;
-			children = (
-				516BB16B14ED259700C042DA /* NSString+SKAdditions.h */,
-				516BB16C14ED259700C042DA /* NSString+SKAdditions.m */,
-			);
-			name = Generic;
 			sourceTree = "<group>";
 		};
 		AA74DCE41E40DA9400FD1619 /* ViewController */ = {
@@ -225,7 +210,7 @@
 				LastUpgradeCheck = 0820;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -282,7 +267,6 @@
 				51150A9A1CEF0133008901A5 /* Buddy.swift in Sources */,
 				51150A941CEEED3C008901A5 /* TextViewCell.swift in Sources */,
 				AAD0EA8B1E40E3F9004B8C0E /* BuddiesViewModel.swift in Sources */,
-				516BB16D14ED259700C042DA /* NSString+SKAdditions.m in Sources */,
 				51150A901CEE4F9D008901A5 /* ChatController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,7 +291,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Chat;
-				SWIFT_OBJC_BRIDGING_HEADER = "Classes/Chat-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -327,7 +310,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Chat;
-				SWIFT_OBJC_BRIDGING_HEADER = "Classes/Chat-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};

@@ -2,7 +2,7 @@ import UIKit
 
 class BuddiesController: UITableViewController {
     
-    var viewModel: BuddiesViewModel!
+    var viewModel = BuddiesViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,6 @@ class BuddiesController: UITableViewController {
             if let selectedIndexPath = tableView.indexPathForSelectedRow,
                 let buddy = getBuddy(at: selectedIndexPath) {
                 (segue.destination as? ChatController)?.buddy = buddy
-                (segue.destination as? ChatController)?.repository = viewModel.repository
             }
         }
     }
