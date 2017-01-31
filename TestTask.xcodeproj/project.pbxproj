@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		51150A8D1CEE4136008901A5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51150A8C1CEE4136008901A5 /* Default-568h@2x.png */; };
 		51150A901CEE4F9D008901A5 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51150A8F1CEE4F9D008901A5 /* ChatController.swift */; };
 		51150A921CEEE9FA008901A5 /* SendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51150A911CEEE9FA008901A5 /* SendController.swift */; };
@@ -21,11 +18,15 @@
 		51150AA01CEF0E75008901A5 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51150A9F1CEF0E75008901A5 /* Repository.swift */; };
 		516BB16D14ED259700C042DA /* NSString+SKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 516BB16C14ED259700C042DA /* NSString+SKAdditions.m */; };
 		519ACD161242CA6800768044 /* Model.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 519ACD151242CA6800768044 /* Model.xcdatamodel */; };
-		519ACD941242D40D00768044 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519ACD931242D40D00768044 /* CoreData.framework */; };
 		51AA41051247985400EB966D /* Bonnie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51AA41011247985400EB966D /* Bonnie.jpg */; };
 		51AA41061247985400EB966D /* Jacob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51AA41021247985400EB966D /* Jacob.jpg */; };
 		51AA41071247985400EB966D /* Kelly.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51AA41031247985400EB966D /* Kelly.jpg */; };
 		51AA41081247985400EB966D /* Matt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51AA41041247985400EB966D /* Matt.jpg */; };
+		AA74DCEA1E40DCD900FD1619 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA74DCE91E40DCD900FD1619 /* Main.storyboard */; };
+		AA74DCEC1E40DE5A00FD1619 /* BuddyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA74DCEB1E40DE5A00FD1619 /* BuddyCell.swift */; };
+		AAD0EA8B1E40E3F9004B8C0E /* BuddiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EA8A1E40E3F9004B8C0E /* BuddiesViewModel.swift */; };
+		AAD0EA8D1E40E86C004B8C0E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EA8C1E40E86C004B8C0E /* CoreDataStack.swift */; };
+		AAD0EA8F1E40FB41004B8C0E /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EA8E1E40FB41004B8C0E /* MessagesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,11 @@
 		51AA41031247985400EB966D /* Kelly.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Kelly.jpg; path = Resources/Kelly.jpg; sourceTree = "<group>"; };
 		51AA41041247985400EB966D /* Matt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Matt.jpg; path = Resources/Matt.jpg; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Chat-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Chat-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		AA74DCE91E40DCD900FD1619 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AA74DCEB1E40DE5A00FD1619 /* BuddyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuddyCell.swift; sourceTree = "<group>"; };
+		AAD0EA8A1E40E3F9004B8C0E /* BuddiesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuddiesViewModel.swift; sourceTree = "<group>"; };
+		AAD0EA8C1E40E86C004B8C0E /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		AAD0EA8E1E40FB41004B8C0E /* MessagesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
-				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
-				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
-				519ACD941242D40D00768044 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +83,7 @@
 				51150A971CEEF64A008901A5 /* AppDelegate.swift */,
 				51150A9F1CEF0E75008901A5 /* Repository.swift */,
 				51150A8E1CEE4F9D008901A5 /* Chat-Bridging-Header.h */,
+				AAD0EA8C1E40E86C004B8C0E /* CoreDataStack.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -111,6 +114,7 @@
 			children = (
 				28A0AAE50D9B0CCF005BE974 /* Chat_Prefix.pch */,
 				519ACD151242CA6800768044 /* Model.xcdatamodel */,
+				AA74DCE91E40DCD900FD1619 /* Main.storyboard */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -170,6 +174,8 @@
 		AA74DCE61E40DAA000FD1619 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AAD0EA8A1E40E3F9004B8C0E /* BuddiesViewModel.swift */,
+				AAD0EA8E1E40FB41004B8C0E /* MessagesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -178,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				51150A931CEEED3C008901A5 /* TextViewCell.swift */,
+				AA74DCEB1E40DE5A00FD1619 /* BuddyCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -215,7 +222,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						LastSwiftMigration = 0800;
@@ -250,6 +257,7 @@
 				51AA41051247985400EB966D /* Bonnie.jpg in Resources */,
 				51AA41061247985400EB966D /* Jacob.jpg in Resources */,
 				51AA41071247985400EB966D /* Kelly.jpg in Resources */,
+				AA74DCEA1E40DCD900FD1619 /* Main.storyboard in Resources */,
 				51150A8D1CEE4136008901A5 /* Default-568h@2x.png in Resources */,
 				51AA41081247985400EB966D /* Matt.jpg in Resources */,
 			);
@@ -264,12 +272,16 @@
 			files = (
 				51150A981CEEF64A008901A5 /* AppDelegate.swift in Sources */,
 				51150A961CEEF376008901A5 /* BuddiesController.swift in Sources */,
+				AAD0EA8F1E40FB41004B8C0E /* MessagesViewModel.swift in Sources */,
 				519ACD161242CA6800768044 /* Model.xcdatamodel in Sources */,
 				51150A921CEEE9FA008901A5 /* SendController.swift in Sources */,
 				51150AA01CEF0E75008901A5 /* Repository.swift in Sources */,
 				51150A9E1CEF0BDC008901A5 /* Message.swift in Sources */,
+				AAD0EA8D1E40E86C004B8C0E /* CoreDataStack.swift in Sources */,
+				AA74DCEC1E40DE5A00FD1619 /* BuddyCell.swift in Sources */,
 				51150A9A1CEF0133008901A5 /* Buddy.swift in Sources */,
 				51150A941CEEED3C008901A5 /* TextViewCell.swift in Sources */,
+				AAD0EA8B1E40E3F9004B8C0E /* BuddiesViewModel.swift in Sources */,
 				516BB16D14ED259700C042DA /* NSString+SKAdditions.m in Sources */,
 				51150A901CEE4F9D008901A5 /* ChatController.swift in Sources */,
 			);
@@ -324,11 +336,28 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -337,12 +366,30 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
