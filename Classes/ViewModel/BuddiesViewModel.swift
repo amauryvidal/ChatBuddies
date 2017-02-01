@@ -9,8 +9,15 @@
 import Foundation
 import CoreData
 
-struct BuddiesViewModel {
-    var buddies = [Buddy]()
+protocol BuddiesViewModelProtocol {
+    var nbBuddies: Int {get}
+    func buddy(at index: Int) -> Buddy?
+    func addBuddy(name: String)
+    func findBuddies() -> [Buddy]
+}
+
+struct BuddiesViewModel: BuddiesViewModelProtocol {
+    private var buddies = [Buddy]()
     
     init() {
         buddies = findBuddies()
@@ -31,15 +38,13 @@ struct BuddiesViewModel {
         }
         return buddies[index]
     }
-}
-
-extension BuddiesViewModel {
-    func addBuddy(name: String) {
+    
+    internal func addBuddy(name: String) {
         let buddy = Buddy(context: CoreDataStack.shared.viewContext)
         buddy.name = name
     }
     
-    func findBuddies() -> [Buddy] {
+    internal func findBuddies() -> [Buddy] {
         let request: NSFetchRequest<Buddy> = Buddy.fetchRequest()
         print(request)
         
@@ -50,7 +55,7 @@ extension BuddiesViewModel {
         }
     }
     
-    func addHardCodedBuddies() {
+    private func addHardCodedBuddies() {
         addBuddy(name: "Jacob")
         addBuddy(name: "Bonnie")
         addBuddy(name: "Matt")

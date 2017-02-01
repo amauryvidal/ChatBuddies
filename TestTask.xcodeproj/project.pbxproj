@@ -15,7 +15,6 @@
 		51150A981CEEF64A008901A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51150A971CEEF64A008901A5 /* AppDelegate.swift */; };
 		51150A9A1CEF0133008901A5 /* Buddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51150A991CEF0133008901A5 /* Buddy.swift */; };
 		51150A9E1CEF0BDC008901A5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51150A9D1CEF0BDC008901A5 /* Message.swift */; };
-		51150AA01CEF0E75008901A5 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51150A9F1CEF0E75008901A5 /* Repository.swift */; };
 		519ACD161242CA6800768044 /* Model.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 519ACD151242CA6800768044 /* Model.xcdatamodel */; };
 		51AA41051247985400EB966D /* Bonnie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51AA41011247985400EB966D /* Bonnie.jpg */; };
 		51AA41061247985400EB966D /* Jacob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51AA41021247985400EB966D /* Jacob.jpg */; };
@@ -40,7 +39,6 @@
 		51150A971CEEF64A008901A5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51150A991CEF0133008901A5 /* Buddy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buddy.swift; sourceTree = "<group>"; };
 		51150A9D1CEF0BDC008901A5 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		51150A9F1CEF0E75008901A5 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		519ACD151242CA6800768044 /* Model.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		51AA41011247985400EB966D /* Bonnie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Bonnie.jpg; path = Resources/Bonnie.jpg; sourceTree = "<group>"; };
 		51AA41021247985400EB966D /* Jacob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Jacob.jpg; path = Resources/Jacob.jpg; sourceTree = "<group>"; };
@@ -69,14 +67,13 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AAD9AAFA1E42405500ADBEBE /* CoreData */,
 				AA74DCE81E40DAF400FD1619 /* Network */,
 				AA74DCE71E40DAA400FD1619 /* View */,
 				AA74DCE61E40DAA000FD1619 /* ViewModel */,
 				AA74DCE51E40DA9B00FD1619 /* Model */,
 				AA74DCE41E40DA9400FD1619 /* ViewController */,
 				51150A971CEEF64A008901A5 /* AppDelegate.swift */,
-				51150A9F1CEF0E75008901A5 /* Repository.swift */,
-				AAD0EA8C1E40E86C004B8C0E /* CoreDataStack.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -168,6 +165,14 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
+		AAD9AAFA1E42405500ADBEBE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AAD0EA8C1E40E86C004B8C0E /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,7 +253,6 @@
 				AAD0EA8F1E40FB41004B8C0E /* ChatViewModel.swift in Sources */,
 				519ACD161242CA6800768044 /* Model.xcdatamodel in Sources */,
 				51150A921CEEE9FA008901A5 /* SendController.swift in Sources */,
-				51150AA01CEF0E75008901A5 /* Repository.swift in Sources */,
 				51150A9E1CEF0BDC008901A5 /* Message.swift in Sources */,
 				AAD0EA8D1E40E86C004B8C0E /* CoreDataStack.swift in Sources */,
 				AA74DCEC1E40DE5A00FD1619 /* BuddyCell.swift in Sources */,

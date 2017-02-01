@@ -13,8 +13,9 @@ class APIClient {
     var botcust2: String?
     var lastRequest: URLSessionDataTask?
     
+    // MARK: - Public 
+    
     func startBot() {
-        print("startBot")
         fetch(pattern: "botid=(\\w+)", at: "http://alice.pandorabots.com") { result in
             self.botId = result
             self.startStep2Bot()
@@ -22,7 +23,6 @@ class APIClient {
     }
     
     func requestBotResponse(lastMessage: String?, response: @escaping (String) -> Void) {
-        print("requestBotResponse")
         if let botId = botId,
             let botcust2 = botcust2 {
             let url = "http://sheepridge.pandorabots.com/pandora/talk?botid=\(botId)&skin=custom_input"
@@ -47,10 +47,13 @@ class APIClient {
     
     func cancelBotResponseRequest() {
         lastRequest?.cancel()
+        lastRequest = nil
     }
     
+    
+    // MARK: - Private
+    
     private func startStep2Bot() {
-        print("startStep2Bot")
         let pattern = "name=\"botcust2\" value=\"(\\w+)"
         if let botId = botId {
             let url = "http://sheepridge.pandorabots.com/pandora/talk?botid=\(botId)&skin=custom_input"
@@ -92,7 +95,6 @@ class APIClient {
     }
     
     private func randomResponse() -> String {
-        print("randomResponse")
         let randIndex = Int(arc4random_uniform(UInt32(responses.count)) + 1)
         return responses[randIndex]
     }

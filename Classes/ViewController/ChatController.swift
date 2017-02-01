@@ -34,6 +34,9 @@ class ChatController: UITableViewController {
         botClient.cancelBotResponseRequest()
     }
     
+    
+    // MARK: - Table View
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -49,6 +52,9 @@ class ChatController: UITableViewController {
         }
         return cell
     }
+    
+    
+    // MARK: - Bot
     
     func addMessage(_ text: String, fromMe: Bool) {
         viewModel.addMessage(text: text, fromMe: fromMe)
@@ -66,12 +72,17 @@ class ChatController: UITableViewController {
         }
     }
     
+    // MARK: - UI
+    
     func scrollToLastMessage() {
         let row = viewModel.nbMessages
         if row > 0 {
             tableView.scrollToRow(at: IndexPath(row: row-1, section: 0), at: .bottom, animated: false)
         }
     }
+    
+    
+    // MARK: - Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "sendMessage",

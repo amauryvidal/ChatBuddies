@@ -8,8 +8,15 @@
 
 import Foundation
 
-struct ChatViewModel {
-    var buddy: Buddy
+protocol ChatViewModelProtocol {
+    var nbMessages: Int {get}
+    var lastMessageContent: String? {get}
+    func message(at index: Int) -> Message?
+    func addMessage(text: String, fromMe: Bool)
+}
+
+struct ChatViewModel: ChatViewModelProtocol {
+    private(set) var buddy: Buddy
     
     private var messages: [Message] {
         return buddy.messages
@@ -19,15 +26,15 @@ struct ChatViewModel {
         return buddy.messages.count
     }
     
+    var lastMessageContent: String? {
+        return messages.last?.text
+    }
+    
     func message(at index: Int) -> Message? {
         guard index < nbMessages else {
             return nil
         }
         return messages[index]
-    }
-    
-    var lastMessageContent: String? {
-        return messages.last?.text
     }
     
     func addMessage(text: String, fromMe: Bool) {
@@ -40,12 +47,3 @@ struct ChatViewModel {
         CoreDataStack.shared.saveContext()
     }
 }
-// let sortDescriptor = NSSortDescriptor(key: "timeSinceReferenceDate", ascending: true)
-
-//func addSortDescriptors() {
-//    let desc: NSEntityDescription = (self.model).entitiesByName["Buddy"]!
-//    let prop: NSFetchedPropertyDescription = desc.propertiesByName["messages"] as! NSFetchedPropertyDescription
-//    let fetchRequest: NSFetchRequest = prop.fetchRequest!
-//    let sort: NSSortDescriptor = NSSortDescriptor(key: "timeSinceReferenceDate", ascending: true)
-//    fetchRequest.sortDescriptors = [sort]
-//}
