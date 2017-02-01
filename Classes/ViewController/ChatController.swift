@@ -18,6 +18,9 @@ class ChatController: UITableViewController {
         
         navigationItem.title = viewModel.buddy.name
         
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 76
+        
         botClient.startBot()
     }
     
@@ -46,14 +49,6 @@ class ChatController: UITableViewController {
         }
         return cell
     }
-    
-    //    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    //        let minSize: CGFloat = 32.0
-    //        let dummy = TextViewCell.cellForTableView(self.tableView)
-    //        dummy.textView.text = (self.buddy.messages)[(indexPath as NSIndexPath).section].text
-    //        let size: CGFloat = dummy.textView.contentSize.height + 12.0
-    //        return size > minSize ? size : minSize
-    //    }
     
     func addMessage(_ text: String, fromMe: Bool) {
         viewModel.addMessage(text: text, fromMe: fromMe)
