@@ -1,6 +1,6 @@
 import UIKit
 
-class ChatController: UITableViewController, UITextViewDelegate {
+class ChatController: UITableViewController {
     
     var viewModel: ChatViewModel!
     var botClient = APIClient()
@@ -21,14 +21,9 @@ class ChatController: UITableViewController, UITextViewDelegate {
         botClient.startBot()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        scrollToLastMessage()
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        scrollToLastMessage()
         requestBotResponse()
     }
     
@@ -52,20 +47,22 @@ class ChatController: UITableViewController, UITextViewDelegate {
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let minSize: CGFloat = 32.0
-//        let dummy = TextViewCell.cellForTableView(self.tableView)
-//        dummy.textView.text = (self.buddy.messages)[(indexPath as NSIndexPath).section].text
-//        let size: CGFloat = dummy.textView.contentSize.height + 12.0
-//        return size > minSize ? size : minSize
-//    }
+    //    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //        let minSize: CGFloat = 32.0
+    //        let dummy = TextViewCell.cellForTableView(self.tableView)
+    //        dummy.textView.text = (self.buddy.messages)[(indexPath as NSIndexPath).section].text
+    //        let size: CGFloat = dummy.textView.contentSize.height + 12.0
+    //        return size > minSize ? size : minSize
+    //    }
     
     func addMessage(_ text: String, fromMe: Bool) {
         viewModel.addMessage(text: text, fromMe: fromMe)
         if fromMe { requestBotResponse() }
         
-        tableView.reloadData()
-        scrollToLastMessage()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.scrollToLastMessage()
+        }
     }
     
     func requestBotResponse() {
@@ -77,13 +74,20 @@ class ChatController: UITableViewController, UITextViewDelegate {
     func scrollToLastMessage() {
         let row = viewModel.nbMessages
         if row > 0 {
-            tableView.scrollToRow(at: IndexPath(row: row, section: 1), at: .bottom, animated: false)
+            tableView.scrollToRow(at: IndexPath(row: row-1, section: 0), at: .bottom, animated: false)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "sendMessage",
+            let vc = (segue.destination as? UINavigationController)?.viewControllers.first as? SendController {
+            vc.delegate = self
         }
     }
 }
 
 extension ChatController: SendControllerDelegate {
-    func didSendMessage(_ text: String) {
+    func didSend(message text: String) {
         addMessage(text, fromMe: true)
     }
 }
