@@ -17,7 +17,7 @@
                BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
                BuildableName = "Chat.app"
                BlueprintName = "Chat"
-               ReferencedContainer = "container:TestTask.xcodeproj">
+               ReferencedContainer = "container:Chat.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "Chat.app"
             BlueprintName = "Chat"
-            ReferencedContainer = "container:TestTask.xcodeproj">
+            ReferencedContainer = "container:Chat.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "Chat.app"
             BlueprintName = "Chat"
-            ReferencedContainer = "container:TestTask.xcodeproj">
+            ReferencedContainer = "container:Chat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "Chat.app"
             BlueprintName = "Chat"
-            ReferencedContainer = "container:TestTask.xcodeproj">
+            ReferencedContainer = "container:Chat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
