@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
                BuildableName = "Chat.app"
-               BlueprintName = "Chat"
-               ReferencedContainer = "container:Chat.xcodeproj">
+               BlueprintName = "ChatBuddies"
+               ReferencedContainer = "container:ChatBuddies.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "Chat.app"
-            BlueprintName = "Chat"
-            ReferencedContainer = "container:Chat.xcodeproj">
+            BlueprintName = "ChatBuddies"
+            ReferencedContainer = "container:ChatBuddies.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -57,8 +57,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "Chat.app"
-            BlueprintName = "Chat"
-            ReferencedContainer = "container:Chat.xcodeproj">
+            BlueprintName = "ChatBuddies"
+            ReferencedContainer = "container:ChatBuddies.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -76,8 +76,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "Chat.app"
-            BlueprintName = "Chat"
-            ReferencedContainer = "container:Chat.xcodeproj">
+            BlueprintName = "ChatBuddies"
+            ReferencedContainer = "container:ChatBuddies.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

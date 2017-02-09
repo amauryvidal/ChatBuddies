@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chat-->
+        <!--ChatBuddies-->
         <scene sceneID="vjq-Eu-shF">
             <objects>
                 <tableViewController id="4hK-WL-cTi" customClass="BuddiesController" customModule="Chat" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                             <outlet property="delegate" destination="4hK-WL-cTi" id="cOm-C0-B9g"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Chat" id="fXz-ns-s9z">
+                    <navigationItem key="navigationItem" title="ChatBuddies" id="fXz-ns-s9z">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Z7A-by-mE1">
                             <connections>
                                 <action selector="addBuddy:" destination="4hK-WL-cTi" id="ok2-4v-Ero"/>
@@ -60,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="-253.59999999999999" y="73.313343328335833"/>
         </scene>
-        <!--Chat-->
+        <!--ChatBuddies-->
         <scene sceneID="jl9-ly-mLQ">
             <objects>
                 <tableViewController id="tDH-zD-aqm" customClass="ChatController" customModule="Chat" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,7 +131,7 @@
                             <outlet property="delegate" destination="tDH-zD-aqm" id="lmy-tl-xXL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Chat" id="PIS-lS-fBy">
+                    <navigationItem key="navigationItem" title="ChatBuddies" id="PIS-lS-fBy">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="TdU-2O-kZ2">
                             <connections>
                                 <segue destination="B0V-i5-jcQ" kind="presentation" identifier="sendMessage" id="tWb-xV-1eb"/>
